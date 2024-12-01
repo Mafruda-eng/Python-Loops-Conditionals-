@@ -1,0 +1,11 @@
+def is_palindrome(item):
+    item_str = str(item)
+    return item_str == item_str[::-1]
+
+lst = eval(input("list: "))
+contains_palindrome = any(is_palindrome(item) for item in lst)
+
+if contains_palindrome:
+    print("list contains a palindrome element.")
+else:
+    print("list does not contain any palindrome elements.")
